@@ -11,7 +11,5 @@ import com.storage.model.MagazzinoPK;
 @Service
 public interface StorageRepository extends JpaRepository<Magazzino,MagazzinoPK>{
 
-	/*Magazzino findByMagazzinoId(MagazzinoPK magazzinoId);
-	List<Magazzino> findByMagazzinoPk_idMagazzino(Long idMagazzino);
-	List<Magazzino> findByMagazzinoPk_idProdotto(Long idProdotto);*/
+	
 }

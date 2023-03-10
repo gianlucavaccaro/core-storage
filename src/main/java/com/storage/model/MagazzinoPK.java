@@ -13,8 +13,6 @@ public class MagazzinoPK implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	private Long idMagazzino;
-	/*@ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_prodotto")*/
 	private Long idProdotto;
 	
 	public MagazzinoPK() {

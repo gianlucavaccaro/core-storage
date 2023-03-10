@@ -34,16 +34,16 @@ public class StorageController {
 		return new ResponseEntity<>(listStorages,HttpStatus.OK);
 	}
 	
-	/*@GetMapping("/storage")
-	public ResponseEntity<List<Magazzino>> getStorageById(@RequestParam(required=true) Long idMagazzino) {
+	@GetMapping("/storageById")
+	public ResponseEntity<Magazzino> getStorageById(@RequestParam(required=true) Long idMagazzino, @RequestParam(required=true) Long idProdotto) {
 		try {
-			List<Magazzino> storage=storageService.findById(idMagazzino);
-			return new ResponseEntity<List<Magazzino>>(storage,HttpStatus.OK);
+			Magazzino storage=storageService.retrieveById(idMagazzino, idProdotto);
+			return new ResponseEntity<Magazzino>(storage,HttpStatus.OK);
 		} catch(ResourceNotFoundException e) {
 			e.printStackTrace();
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
-	}*/
+	}
 	
 	/*CREATE*/
 	@PutMapping("/storage")
